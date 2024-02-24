@@ -1,32 +1,32 @@
 package com.new_codings;
 
 import java.lang.reflect.Array;
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Iterator;
 
 public class Integer_Reverse {
-
+   
 	
 	private static void reverse_integer() {
 
 		int data=123456;
 		int rev=0;
-		
 		while(data !=0) {
 		rev=rev*10+data%10;
 		data=data/10;
 		}
 		System.out.println(rev);
-		
 	}
 	
 	private static  void Arrayvalue_reverse() {
 		int [] arr= {8,7,55,4,6,4,1,2,4};
+		ArrayList<Integer> dd=new ArrayList<Integer>();
 		for (int i = arr.length-1; i >=0 ; i--) {
-			System.out.println(arr[i]);
+			dd.add(arr[i]);
 		}
+		System.out.println(dd);
 	}
-	
 	
 	private static void sort_integer() {
 
@@ -36,11 +36,8 @@ public class Integer_Reverse {
 	 
 	 String valueOf = String.valueOf(charArray);
 	 int parseInt = Integer.parseInt(valueOf);
-	 System.out.println(parseInt);
-		
-		
+	 System.out.println(parseInt);		
 	}
-	
 	
 	private static  void Arrayvalue_sort() {
 		int [] arr= {8,7,55,4,6,4,1,2,4};

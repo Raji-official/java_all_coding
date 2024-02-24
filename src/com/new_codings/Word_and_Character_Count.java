@@ -1,6 +1,7 @@
 package com.new_codings;
 
 import java.util.HashMap;
+import java.util.HashSet;
 
 public class Word_and_Character_Count {
 	
@@ -9,21 +10,16 @@ public class Word_and_Character_Count {
          String str="javaproaram";
          
          String[] split = str.split("");
-             HashMap<String, Integer> map=new HashMap<>();
-//             Set<String> keySet = map.keySet();
-             
-//             Initially  map is empty match the letter include or not
-//             if include the letter add count again come the letter
-           
+             HashMap<String, Integer> map=new HashMap<>();  
+             HashSet<String> hh=new HashSet<String>();
             for ( String c :split) {
-            	 System.out.println(map);
-               if (map.containsKey(c)) {
-	          map.put(c, map.get(c)+1);
+               if (!hh.contains(c)) {
+	         hh.add(c);
             }else {
-         	map.put(c, 1);
+         	System.out.println("already in");
            }
            }
-            System.out.println(map);
+            System.out.println(hh);
 	}
 	
 	
@@ -50,4 +46,9 @@ public class Word_and_Character_Count {
 		System.out.println(data);
    
 	}
+	
+	public static void main(String[] args) {
+		charactercount();
+	}
+	
 }
